@@ -13,7 +13,7 @@ import { useContext } from 'react';
 const Header = () => {
   const [{basket},dispatch]=useContext(DataContext)
   const totalitem=basket?.reduce((amount,item)=>{
-    return item.amount=amount
+    return item.amount+amount
   },0)
   return (
     <section className='classes.fixed'>
